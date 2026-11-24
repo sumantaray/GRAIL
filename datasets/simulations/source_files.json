@@ -1,0 +1,44 @@
+[
+  {
+    "file": "P1.h5ad",
+    "n_cells": 700,
+    "n_genes": 3000,
+    "sha256": "95b85cbf7aac3684ae22d82c36b413d2fdbbce9ce0ed39ec7241ed3fd1f33e77"
+  },
+  {
+    "file": "P2.h5ad",
+    "n_cells": 900,
+    "n_genes": 3000,
+    "sha256": "44249ce1c3320ce7aab39d0efefb297c803da17fe8c8b94d0a05496153ed1fd4"
+  },
+  {
+    "file": "P3.h5ad",
+    "n_cells": 700,
+    "n_genes": 3000,
+    "sha256": "d6ae1c28a22e8c49dc8915ca70229aa2b2a9e4a881985607913c010fba4ce65e"
+  },
+  {
+    "file": "P4.h5ad",
+    "n_cells": 700,
+    "n_genes": 3000,
+    "sha256": "6ae65377e35d091e51e9542d69f7617283170c4277cdbe3ec466940c6e544d2a"
+  },
+  {
+    "file": "P5.h5ad",
+    "n_cells": 700,
+    "n_genes": 3000,
+    "sha256": "30a2cb8b8973ecf54ceb9151d486e43b2f7fca2bf1b4d85c7d4627b433e3e182"
+  },
+  {
+    "file": "P6.h5ad",
+    "n_cells": 650,
+    "n_genes": 3000,
+    "sha256": "694dc07c0c82240f73c114090bcd7753021d524cb47b8d954ed4018a5699abf0"
+  },
+  {
+    "file": "P7.h5ad",
+    "n_cells": 800,
+    "n_genes": 3000,
+    "sha256": "0ff6ef8270871d54d529dc4c150b3f2b4deb6695dfc8d14ffbe2f66ef6f7b006"
+  }
+]

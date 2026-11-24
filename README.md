@@ -1,35 +1,39 @@
-# GRAIL: Generative Reconstruction of Unobserved Dynamics of Single-Cell Transcriptomic Trajectories
+# GRAIL
 
-This repository contains the code and data supporting the GRAIL framework as described in the accompanying paper. GRAIL reconstructs biologically plausible intermediate cell states between two developmental endpoints using a three-step pipeline: (i) a pretrained autoencoder to embed stage-specific transcriptomes into a latent space, (ii) locality-sensitive hashing (LSH) for anchor selection and smooth interpolation between endpoints in the latent space, and (iii) a generative adversarial network (GAN) decoder to synthesize realistic intermediate expression profiles from the interpolated latent representations.
+**Generative Reconstruction of Unobserved Dynamics of Single-Cell Transcriptomic Trajectories**
+Sumanta Ray, Sukhen Das Mandal, Snehalika Lall, and Saumyadipta Pyne
 
-## Directory Structure
+GRAIL takes single-cell expression counts from two endpoint populations and generates candidate expression profiles between them. The model selects endpoint anchors, encodes them with a shared autoencoder, and applies a separately trained generator to interpolated pairs of codes. Observed intermediate cells are reserved for evaluation.
 
-- `src/grail` – Source code for the GRAIL method (to be filled with the actual implementation).
-- `data` – Processed single-cell RNA-seq datasets and simulation datasets used in the paper.
-- `docs` – Supplementary documentation and tutorials.
-- `notebooks` – Jupyter notebooks with example usage and analyses.
-- `grail_workflow.png` – Diagram illustrating the GRAIL workflow.
+![GRAIL workflow, Figure 1 from the revised manuscript](docs/figures/figure-1-workflow.png)
 
-## Installation
+## Run the example
 
-To install the dependencies, clone this repository and install the required Python packages:
+The example contains 480 **observed human embryoid-body cells** with their original counts, sampled across the five collection windows. The short configuration exercises training and evaluation on a CPU. From the repository root:
 
 ```bash
-git clone https://github.com/sumantaray/GRAIL.git
-cd GRAIL
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+python scripts/directional_check.py
+grail run --data datasets/example/eb_480.h5ad --config configs/quick.json --out runs/example --seed 42 --save-observed
+python scripts/plot_joint.py runs/example/lsh/seed-42
 ```
 
-## Usage
+Open `runs/example/lsh/seed-42/generated.h5ad` for the generated profiles and `joint_umap.png` for the four-panel figure. An [example notebook](notebooks/quickstart.ipynb) reads the cells and runs the same workflow.
 
-Please refer to the notebooks in the `notebooks/` directory for examples of training GRAIL on your own data or reproducing the experiments from the paper.
+## Data, figures and experiments
 
-## GRAIL Workflow
+| Resource | Location |
+| --- | --- |
+| Full embryoid-body counts, collection windows and file checksums | [datasets/embryoid_body](datasets/embryoid_body) |
+| Dataset provenance, source DOI and mouse cortex availability | [Dataset guide](datasets/README.md) |
+| Seven Splatter simulation designs and regeneration commands | [P1–P7](datasets/simulations/README.md) |
+| All six figures from the revised manuscript | [Figure gallery](docs/results.md) |
+| Full training, three seeds, ablations and held-out-stage evaluation | [Experiment commands](docs/quickstart.md) |
+| Exact model inputs and implementation choices | [Algorithm and settings](docs/theory.md) |
+| Checkpoints, evaluation outputs and table mapping | [Output guide](docs/api.md) |
 
-![GRAIL workflow](grail_workflow.png)
+## Version and provenance
 
-## Citation
-
-If you use GRAIL in your research, please cite the associated paper:
-
-> Sumanta Ray, Sukhen Das Mandal, Snehalika Lall, and Saumyadipta Pyne (2026), "Generative Reconstruction of Unobserved Dynamics of Single-Cell Transcriptomic Trajectories".
+This is a reference implementation reconstructed from the revised Methods and Algorithm 1. It records the configuration, seed, selected genes, cell IDs, anchor pairs and software versions for each new run. The original training checkpoints, historical per-seed outputs, and exact mouse cortex input were unavailable for comparison. The manuscript figures are supplied as figure exports. The comparison tables produced by the commands above contain measurements from the corresponding new run. See the [validation guide](docs/results.md) for interpretation.

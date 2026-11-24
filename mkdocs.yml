@@ -1,15 +1,14 @@
-﻿site_name: GRAIL
-site_description: Generative trajectory inference for scRNA-seq
-site_url: https://<USER>.github.io/GRAIL/
-repo_url: https://github.com/<USER>/GRAIL
+site_name: GRAIL
+site_description: Endpoint-based reconstruction of candidate single-cell states
+site_url: https://sumantaray.github.io/GRAIL/
+repo_url: https://github.com/sumantaray/GRAIL
 theme:
   name: material
-  features: [navigation.sections, navigation.indexes, content.code.copy, toc.integrate]
 nav:
-  - Home: index.md
-  - Quickstart: quickstart.md
-  - Results: results.md
-  - Theory & Algorithm: theory.md
-  - API: api.md
-plugins: [search, mkdocs-jupyter]
-markdown_extensions: [admonition, toc, codehilite]
+  - Overview: index.md
+  - Running GRAIL: quickstart.md
+  - Algorithm: theory.md
+  - Figures and validation: results.md
+  - Inputs and outputs: api.md
+plugins: [search]
+markdown_extensions: [toc, fenced_code, tables]

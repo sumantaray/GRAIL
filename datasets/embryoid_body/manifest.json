@@ -1,0 +1,177 @@
+{
+  "source_doi": "10.17632/v6n743h5ng.1",
+  "archive_sha256": "f0f07b7b5b5bc04e61fbe0e553c1e202e940dd5332cb7ac25f5a27df0170db92",
+  "parts": [
+    {
+      "file": "T0_1A_0001-2000.h5ad",
+      "batch": "T0_1A",
+      "window": "Day 0-3",
+      "t": 0.0,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "1f05e0a230198b87c5208f1eeecf113beb6534273710912b6fdedcb064b8bfe8"
+    },
+    {
+      "file": "T0_1A_2001-4000.h5ad",
+      "batch": "T0_1A",
+      "window": "Day 0-3",
+      "t": 0.0,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "96d6c24a75cb4726a11fedcfb1f2b1f8cb8447e849249a4c45785c26d90763db"
+    },
+    {
+      "file": "T0_1A_4001-4649.h5ad",
+      "batch": "T0_1A",
+      "window": "Day 0-3",
+      "t": 0.0,
+      "n_cells": 649,
+      "n_genes": 33694,
+      "sha256": "25f346b6bd2fda054701f02266a85438d62fc068780f5ae90d52a88c7ff2e612"
+    },
+    {
+      "file": "T2_3B_0001-2000.h5ad",
+      "batch": "T2_3B",
+      "window": "Day 6-9",
+      "t": 0.25,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "968c2f1b36a045dd6c3de7e1afbeb256310a4870038d1b727b736d846560c67e"
+    },
+    {
+      "file": "T2_3B_2001-4000.h5ad",
+      "batch": "T2_3B",
+      "window": "Day 6-9",
+      "t": 0.25,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "ecf388c67880fb871c0d5c7be9b68f887359f8d0126feec8dd03dfc584e56d43"
+    },
+    {
+      "file": "T2_3B_4001-6000.h5ad",
+      "batch": "T2_3B",
+      "window": "Day 6-9",
+      "t": 0.25,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "336d1f30122b80ca9002c76659e62416ead292800d4a26cfdd7a6e3b547faf8a"
+    },
+    {
+      "file": "T2_3B_6001-7377.h5ad",
+      "batch": "T2_3B",
+      "window": "Day 6-9",
+      "t": 0.25,
+      "n_cells": 1377,
+      "n_genes": 33694,
+      "sha256": "06990d4b31fd0015c812047d4f5468464e3747ce947663dbec87064f13a15eb8"
+    },
+    {
+      "file": "T4_5C_0001-2000.h5ad",
+      "batch": "T4_5C",
+      "window": "Day 12-15",
+      "t": 0.5,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "d6e148dc95de4518b7613b15f4e954f93b681584107571a3557a2b4cd928e4a2"
+    },
+    {
+      "file": "T4_5C_2001-4000.h5ad",
+      "batch": "T4_5C",
+      "window": "Day 12-15",
+      "t": 0.5,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "18994ca1a00fc5cd3079708b865b0c18937872518444878337bf69e02121240c"
+    },
+    {
+      "file": "T4_5C_4001-6000.h5ad",
+      "batch": "T4_5C",
+      "window": "Day 12-15",
+      "t": 0.5,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "bfbbb672b1465a43ddb306c7f37916cad8ebd51000fbfded0f774d791dfad8c0"
+    },
+    {
+      "file": "T4_5C_6001-6245.h5ad",
+      "batch": "T4_5C",
+      "window": "Day 12-15",
+      "t": 0.5,
+      "n_cells": 245,
+      "n_genes": 33694,
+      "sha256": "f04aaec3c28c271c9f3bb8e5bed839f92059faecaa5403727b46e7eb167011f3"
+    },
+    {
+      "file": "T6_7D_0001-2000.h5ad",
+      "batch": "T6_7D",
+      "window": "Day 18-21",
+      "t": 0.75,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "10a38bd822e7e5a64ed0511dd5ff8d2ea41b95358379a06c6312ea2401a05b3b"
+    },
+    {
+      "file": "T6_7D_2001-4000.h5ad",
+      "batch": "T6_7D",
+      "window": "Day 18-21",
+      "t": 0.75,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "2642d5799744b824462b4a25ac3aec158ff7bf6accebfe82c5bd96c27a971641"
+    },
+    {
+      "file": "T6_7D_4001-6000.h5ad",
+      "batch": "T6_7D",
+      "window": "Day 18-21",
+      "t": 0.75,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "27836cba84fcac1586a0417d46bcd4389f40aaf5d1f3f6da09ed7b5c6573910d"
+    },
+    {
+      "file": "T6_7D_6001-6563.h5ad",
+      "batch": "T6_7D",
+      "window": "Day 18-21",
+      "t": 0.75,
+      "n_cells": 563,
+      "n_genes": 33694,
+      "sha256": "4eea4364434e6b8f1dd748cd367e07af950f8391f849caa887ea2c4c1ae02172"
+    },
+    {
+      "file": "T8_9E_0001-2000.h5ad",
+      "batch": "T8_9E",
+      "window": "Day 24-27",
+      "t": 1.0,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "490e41c69466445a6e3b35cf511ac60256367fbbea4cbf7e4f50358f2939cb97"
+    },
+    {
+      "file": "T8_9E_2001-4000.h5ad",
+      "batch": "T8_9E",
+      "window": "Day 24-27",
+      "t": 1.0,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "3f5f4b41348435b2abb62203e15699003cbffd4d2e3564b009a865366ee8ae35"
+    },
+    {
+      "file": "T8_9E_4001-6000.h5ad",
+      "batch": "T8_9E",
+      "window": "Day 24-27",
+      "t": 1.0,
+      "n_cells": 2000,
+      "n_genes": 33694,
+      "sha256": "ad6d838d004420d736e7d64daeb50c08a9efbab7e5cd39efd5f5a5a2b4414045"
+    },
+    {
+      "file": "T8_9E_6001-6327.h5ad",
+      "batch": "T8_9E",
+      "window": "Day 24-27",
+      "t": 1.0,
+      "n_cells": 327,
+      "n_genes": 33694,
+      "sha256": "2460aa95fbe2e24843067c3288aa72d5d0a4f0311ae077426089ae6f888c64d1"
+    }
+  ]
+}

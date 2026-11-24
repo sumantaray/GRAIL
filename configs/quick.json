@@ -1,0 +1,45 @@
+{
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "min_genes": 200,
+  "min_cells": 3,
+  "target_sum": 10000,
+  "hvg": 256,
+  "test_fraction": 0.2,
+  "anchors_a": 40,
+  "anchors_b": 40,
+  "lsh_tables": 20,
+  "lsh_bits": 10,
+  "ae_epochs": 2,
+  "ae_lr": 0.001,
+  "gan_epochs": 3,
+  "gan_steps_per_epoch": 1,
+  "batch_size": 32,
+  "gan_lr": 0.0002,
+  "gan_betas": [
+    0.5,
+    0.999
+  ],
+  "real_label": 0.9,
+  "gradient_penalty": 10,
+  "grid": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "geometry_grid": [
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "markers_per_direction": 25,
+  "evaluation_cells": 16,
+  "threads": 2,
+  "device": "cpu"
+}
