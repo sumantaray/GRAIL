@@ -2,7 +2,10 @@ name: Verify the published GRAIL reference
 on:
   push:
     branches: [publication/stage-v0.1.0-reference-a7f10d2]
-    paths: [.github/workflows/verify-reference.yml]
+    paths:
+      - .github/workflows/verify-reference.yml
+      - scripts/replay_table7.py
+      - results/embryoid_body/table7_reference.tex
 
 permissions:
   contents: read
@@ -80,3 +83,25 @@ jobs:
           assert counts == {t: 200 for t in (0, 0.25, 0.5, 0.75, 1)}, counts
           print(f"Example replay matched. Reference checkpoint generated {reference.shape[0]} profiles across {reference.shape[1]} genes.")
           PY
+      - name: Replay the Table 7 controls in the two distance spaces
+        run: |
+          git fetch --no-tags --depth=1 origin "$GITHUB_SHA"
+          git show "$GITHUB_SHA:scripts/replay_table7.py" > scripts/replay_table7.py
+          python scripts/replay_table7.py runs/reference-replayed.h5ad --out "$RUNNER_TEMP/table7-seed42.csv"
+          cat "$RUNNER_TEMP/table7-seed42.csv"
+      - name: Compile the measured embryoid-body table
+        run: |
+          git show "$GITHUB_SHA:results/embryoid_body/table7_reference.tex" > "$RUNNER_TEMP/table7_reference.tex"
+          if ! command -v pdflatex >/dev/null; then
+            sudo apt-get -qq update
+            sudo apt-get -qq install -y --no-install-recommends texlive-latex-base
+          fi
+          cd "$RUNNER_TEMP"
+          cat > table7-check.tex <<'TEX'
+          \documentclass{article}
+          \begin{document}
+          \input{table7_reference}
+          \end{document}
+          TEX
+          pdflatex -halt-on-error -interaction=nonstopmode table7-check.tex
+          if grep -F 'Overfull \hbox' table7-check.log; then exit 1; fi
