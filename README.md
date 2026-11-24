@@ -31,7 +31,7 @@ Open `runs/example/lsh/seed-42/generated.h5ad` for the generated profiles and `j
 | Mouse cortex input status and required stage metadata | [Mouse cortex](datasets/mouse_cortex/README.md) |
 | Seven Splatter simulation designs and regeneration commands | [P1–P7](datasets/simulations/README.md) |
 | All six figures from the revised manuscript | [Figure gallery](docs/results.md) |
-| Measured three-seed results, full embryoid-body dataset and branching simulation | [Results and per-seed tables](results/README.md) |
+| Measured three-seed results, full embryoid-body dataset and branching simulation | [Results and per-seed tables](results/README.md) · [Embryoid-body Table 7 for Overleaf](results/embryoid_body/table7_reference.tex) |
 | Trained embryoid-body generator, seed 42, with paired codes and feature IDs | [Replay the checkpoint](results/README.md#replay-the-embryoid-body-generator) |
 | Full training, three seeds, ablations and held-out-stage evaluation | [Experiment commands](docs/quickstart.md) |
 | Exact model inputs and implementation choices | [Algorithm and settings](docs/theory.md) |

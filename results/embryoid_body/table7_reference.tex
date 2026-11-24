@@ -1,0 +1,42 @@
+% Include with \input{table7_reference.tex}. Uses core LaTeX only.
+% Source: sumantaray/GRAIL v0.1.0-reference, commit ece9fcd.
+% Inputs: results/embryoid_body/sensitivity.csv and endpoint_wd.csv; LSH rows.
+\begin{table}[tbp]
+\centering
+\caption{Condition sensitivity and endpoint agreement in the embryoid-body reference runs.
+Entries give the mean and sample standard deviation across seeds 42, 123, and 2026.
+Each comparison uses 200 cells per population, with nearest-neighbor pairing of the
+LSH-selected anchors. Distances use empirical Wasserstein-1 (WD) with Euclidean costs
+in ten unwhitened principal components fitted on training endpoints. Paired RMS change
+measures expression change across the retained genes relative to the same pairs at $t=0$.
+The best other intermediate coordinate minimizes WD within each seed. Bold means mark
+the smallest mean WD in each held-out stage.}
+\label{tab:grail-reference-eb-sensitivity}
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccc@{}}
+\hline
+\multicolumn{4}{@{}l}{\textbf{A. Held-out embryoid-body collection windows}}\\
+ & Days 6--9 & Days 12--15 & Days 18--21\\
+ & $t=0.25$ & $t=0.50$ & $t=0.75$\\
+\hline
+Paired RMS change & $0.052\pm0.014$ & $0.107\pm0.031$ & $0.178\pm0.068$ \\
+WD to matched output & $17.81\pm4.21$ & $16.69\pm4.10$ & $16.50\pm3.60$ \\
+WD to fixed source-code output & $18.17\pm3.73$ & $17.29\pm3.41$ & $17.19\pm3.08$ \\
+WD to best other intermediate output & $17.25\pm4.13$ & $16.59\pm3.78$ & $16.53\pm3.83$ \\
+WD to held-out Stage B cells & \textbf{7.93}$\,\pm\,$0.12 & \textbf{5.85}$\,\pm\,$0.14 & \textbf{5.54}$\,\pm\,$0.10 \\
+\hline
+\end{tabular}
+
+\smallskip
+\begin{tabular}{@{}lcc@{}}
+\hline
+\multicolumn{3}{@{}l}{\textbf{B. Generated population at $t=0$}}\\
+ & To real Stage A & To real Stage B\\
+\hline
+WD & $20.45\pm3.54$ & $17.00\pm3.13$\\
+\hline
+\end{tabular}
+\endgroup
+\end{table}
