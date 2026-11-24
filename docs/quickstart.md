@@ -36,7 +36,7 @@ grail run --data datasets/embryoid_body --config configs/reference.json --seed 4
   --external WaddingtonOT=path/to/wot_seed42.h5ad
 ```
 
-The authors' external-model checkpoints, exact historical solver configurations and original baseline predictions have not been deposited in this reference package. The import path evaluates externally supplied predictions. [TrajectoryNet](https://github.com/KrishnaswamyLab/TrajectoryNet) · [Waddington-OT](https://github.com/broadinstitute/wot)
+The authors' external-model checkpoints, exact historical solver configurations and original baseline predictions have not been deposited in this reference package. Supplied predictions appear under their own method names in the distance, marker-trend, classifier-consistency, geometry and held-out population tables. [TrajectoryNet](https://github.com/KrishnaswamyLab/TrajectoryNet) · [Waddington-OT](https://github.com/broadinstitute/wot)
 
 ## Other datasets
 

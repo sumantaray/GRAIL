@@ -1,0 +1,7 @@
+branch,reference_count,reference_n,reference_percent,generated_count,generated_n,generated_percent,seed,anchor_method
+branch_1,187,350,53.42857142857142,187,200,93.5,42,lsh
+branch_2,163,350,46.57142857142857,13,200,6.5,42,lsh
+branch_1,187,350,53.42857142857142,200,200,100.0,123,lsh
+branch_2,163,350,46.57142857142857,0,200,0.0,123,lsh
+branch_1,187,350,53.42857142857142,200,200,100.0,2026,lsh
+branch_2,163,350,46.57142857142857,0,200,0.0,2026,lsh

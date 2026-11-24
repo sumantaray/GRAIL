@@ -1,0 +1,3 @@
+anchor_method,branch,reference_count_mean,reference_count_std,reference_count_count,reference_n_mean,reference_n_std,reference_n_count,reference_percent_mean,reference_percent_std,reference_percent_count,generated_count_mean,generated_count_std,generated_count_count,generated_n_mean,generated_n_std,generated_n_count,generated_percent_mean,generated_percent_std,generated_percent_count
+lsh,branch_1,187.0,0.0,3,350.0,0.0,3,53.42857142857142,0.0,3,195.66666666666663,7.505553499465137,3,200.0,0.0,3,97.83333333333331,3.752776749732568,3
+lsh,branch_2,163.0,0.0,3,350.0,0.0,3,46.57142857142858,0.0,3,4.333333333333333,7.505553499465135,3,200.0,0.0,3,2.1666666666666665,3.752776749732568,3

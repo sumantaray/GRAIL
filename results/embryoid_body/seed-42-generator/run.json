@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "anchor_method": "lsh",
+  "input_sha256": "57408c5cff429425cb35caf7140005b312ebf4fc437b561ae9dd0e9f8d648271",
+  "data_name": "embryoid_body",
+  "python": "3.12.14",
+  "versions": {
+    "grail-scrna": "0.1.0",
+    "torch": "2.5.1+cpu",
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "scanpy": "1.11.5",
+    "anndata": "0.12.19"
+  },
+  "external_inputs": [],
+  "training_noise": "normal(0,I64)",
+  "inference_noise": "zeros(64)"
+}

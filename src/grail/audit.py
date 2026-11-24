@@ -72,14 +72,17 @@ def evaluate(data, X, t, train, test, qc, ia, ib, ae, gen, cfg, seed, variant, e
             rows["ccm"].append(dict(method=method, t=s, mean_p_stage_b=clf.predict_proba(pops[s])[:,1].mean()))
         for s in stages:
             rows["wd"].append(dict(method=method, t=s, n=n, wd=metrics.wasserstein(gen_proj[method][s], projected[s])))
-            if method == "nearest":
+            if method == "nearest" or method in (external or {}):
                 labels = None
                 if annotation is not None:
                     y = data.obs["cell_type"].iloc[reference[s]]
                     if y.notna().all():
                         labels = y.astype(str).to_numpy()
                 scores = metrics.population(real[s], matched[s], projected[s], gen_proj[method][s], seed, labels, annotation)
-                rows["population"].append(dict(t=s, n=n, **scores))
+                record = dict(t=s, n=n, **scores)
+                if external:
+                    record["method"] = method
+                rows["population"].append(record)
     zpath = all_latent["nearest"]
     ref_projected = {s: (zpath[s][pairs] - zmean) / zscale for s in grid}
     gp = gen_proj["nearest"]
