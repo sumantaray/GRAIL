@@ -39,4 +39,6 @@ Open `runs/example/lsh/seed-42/generated.h5ad` for the generated profiles and `j
 
 ## Version and provenance
 
+The code, data, checkpoint and validation tables for the nine reference runs are archived together in [GRAIL v0.1.0-reference](https://github.com/sumantaray/GRAIL/releases/tag/v0.1.0-reference).
+
 This is a reference implementation reconstructed from the revised Methods and Algorithm 1. It records the configuration, seed, selected genes, cell IDs, anchor pairs and software versions for each new run. The original training checkpoints, historical per-seed outputs, and exact mouse cortex input were unavailable for comparison. The manuscript figures are supplied as figure exports. The comparison tables produced by the commands above contain measurements from the corresponding new run. See the [validation guide](docs/results.md) for interpretation.
